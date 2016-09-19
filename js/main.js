@@ -5,6 +5,6 @@ window.addEventListener("load", function() {
 		var texto = document.createElement("p");
 			texto.innerText = boxText;
 		var contenedor = document.getElementById("contenedor");
-			contenedor.childNodes[0];
+			contenedor.insertBefore(texto, contenedor.childNodes[0]);
 });
   });
