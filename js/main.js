@@ -1,10 +1,27 @@
 window.addEventListener("load", function() {
-	var boton = document.getElementById("enviar");
-	boton.addEventListener("click", function() {
-		var boxText = document.getElementById("box-text").value;
-		var texto = document.createElement("p");
-			texto.innerText = boxText;
+	var boton = document.getElementById("go");
+	boton.disabled = true;
+	var boxText = document.getElementById("box-text");
+
+	boton.addEventListener("click", function(e){
+
+		e.preventDefault();
+		var valor = boxText.value;
+			agregarText(valor);
+			boxText.value = "";
+		boton.disabled = true;
+    });
+
+	function agregarText(valor) {
+		var div = document.createElement("div");
+			div.innerText = valor;
 		var contenedor = document.getElementById("contenedor");
-			contenedor.insertBefore(texto, contenedor.childNodes[0]);
+			contenedor.insertBefore(div, contenedor.childNodes[0]);
+	}
+
+
+	boxText.addEventListener("keypress", function(){
+		boton.disabled = false;
+	}); 
 });
-  });
+
