@@ -15,12 +15,12 @@ window.addEventListener("load", function() {
 	function agregarText(valor) {
 		var div = document.createElement("div");
 			div.innerText = valor;
+			div.classList.add("textConten");
 		var contenedor = document.getElementById("contenedor");
 			contenedor.insertBefore(div, contenedor.childNodes[0]);
 	}
 
-
-	boxText.addEventListener("keypress", function(){
+	boxText.addEventListener("keydown", function(){
 		boton.disabled = false;
 	}); 
 });

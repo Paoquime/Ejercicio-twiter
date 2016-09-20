@@ -1,6 +1,44 @@
-button {
-	background-color: rgba(76, 175, 80, 0.47);
-	margin-left: 140px;
+body {
+	background-image: url("../image/fondo.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
 
+textarea {
+	width: 40%;
+	height: 10%;
+	padding: 5px;
+	margin-top: 12%;
+	margin-left: 5%;
+	border-width: 2px; 
+	border-style: solid;
+	letter-spacing : 2px;
+	font-size:1em; 
+	color: #313131; 
+	text-align: center;
+}
+
+
+button {
+	width: 8%;
+	margin-left: 22%;
+	padding: 10px;
+	color: #000;
+	font-weight: bold;
+}
+
+button:hover {
+	background-color: #1DA1F2;
+	color: #FFF;
+}
+
+.textConten {
+	margin-top: 3%;
+	margin-left: 5%;
+	width: 40%;
+	height: 10%;
+	padding: 5px;
+	border: solid 1px #49594A;
+	background-color: #F4F5F9;
+}
