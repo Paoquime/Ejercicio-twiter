@@ -21,8 +21,8 @@ textarea {
 
 
 button {
-	width: 8%;
-	margin-left: 22%;
+	width: 60px;
+	margin-left: 20%;
 	padding: 10px;
 	color: #000;
 	font-weight: bold;
@@ -41,4 +41,23 @@ button:hover {
 	padding: 5px;
 	border: solid 1px #49594A;
 	background-color: #F4F5F9;
+}
+
+span {
+	color: #074713;
+	margin-left: 10%;
+    border: solid darkgrey;
+    padding: 2px;
+}
+
+.yellow {
+	color: #F0FF08;
+}
+
+.red {
+	color: #FF0000;
+}
+
+.orange {
+	color: #FF7C00;
 }
