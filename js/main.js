@@ -19,6 +19,7 @@ window.addEventListener("load", function() {
 		var tecla = e.keyCode;
 		cantidadCaracteres(boxText);
 		enterEspacio(tecla);
+		creceText(boxText);
 	});
 
 	function agregarText(valor) {
@@ -52,6 +53,7 @@ window.addEventListener("load", function() {
 			contador.classList.remove("red");
 		}
 
+
 		if (caracteres > 140){
 			contador.classList.add("orange");
 		}else{
@@ -67,6 +69,13 @@ window.addEventListener("load", function() {
 		} 
 		if (boxText.rows < 3){
 			boxText.rows = 2; 
+		}
+	}
+
+	function creceText (boxText){
+		var caracteres = boxText.value.length;
+		if (caracteres > boxText.rows * boxText.cols){
+			boxText.rows ++;
 		}
 	}
 });
