@@ -3,6 +3,7 @@ window.addEventListener("load", function() {
 	var boxText = document.getElementById("box-text");
 	var contador = document.getElementById("contador");
 
+
 	boton.addEventListener("click", function(e){
 		e.preventDefault();
 
@@ -14,8 +15,10 @@ window.addEventListener("load", function() {
 		contador.style.color = "black";
     });
 
-	boxText.addEventListener("keyup", function(){
+	boxText.addEventListener("keyup", function(e){
+		var tecla = e.keyCode;
 		cantidadCaracteres(boxText);
+		enterEspacio(tecla);
 	});
 
 	function agregarText(valor) {
@@ -53,6 +56,17 @@ window.addEventListener("load", function() {
 			contador.classList.add("orange");
 		}else{
 			contador.classList.remove("orange");
+		}
+	}
+
+	function enterEspacio (tecla){
+		if (tecla == 13) {
+			boxText.rows ++;
+		}else if (tecla == 8) {
+			boxText.rows --;
+		} 
+		if (boxText.rows < 3){
+			boxText.rows = 2; 
 		}
 	}
 });
