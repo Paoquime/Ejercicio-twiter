@@ -29,6 +29,13 @@ window.addEventListener("load", function() {
 
 		var contenedor = document.getElementById("contenedor");
 			contenedor.insertBefore(div, contenedor.childNodes[0]);
+
+		var fecha = new Date();
+		var hora = fecha.getHours();
+		var min = fecha.getMinutes();
+		var almacenaHora = document.createElement("div");
+		almacenaHora.innerText = hora + ":" + min;
+		div.insertBefore(almacenaHora,div.childNodes[0]);
 	}
 
 	function cantidadCaracteres(text){
